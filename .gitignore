@@ -1,1 +1,41 @@
+# Dependências do Composer
+/vendor/
+/composer.lock
+
+# Arquivos de configuração locais ou temporários
 .env
+/.env.local
+/.env.*.local
+
+# Arquivos de cache e logs
+/.cache
+/.logs
+/logs/
+/tmp/
+
+# Arquivos de sessão e uploads temporários
+/sessions/
+/uploads/
+
+# IDEs e editores (como PHPStorm, VSCode, etc.)
+.idea/
+/.vscode/
+/nbproject/
+*.swp
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos gerados no build (caso exista build em seu projeto)
+build/
+dist/
+
+# Configurações locais de PHP (caso você tenha criado arquivos de desenvolvimento local)
+phpunit.xml
+phpunit.xml.dist
+
+# Outros arquivos desnecessários
+*.log
+*.out
+*.bak
