@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:5.7  # Usando a versão MySQL 5.7
+    container_name: mysql57
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass  # Senha do root
+      MYSQL_DATABASE: php_playground # Nome do banco de dados
+      MYSQL_USER: phpuser            # Usuário do banco
+      MYSQL_PASSWORD: phppass        # Senha do usuário
+    ports:
+      - "3306:3306"  # Porta do MySQL
+    volumes:
+      - mysql_data:/var/lib/mysql  # Volume para persistir dados
+    networks:
+      - php-mysql-network
+
+networks:
+  php-mysql-network:
+    driver: bridge
+
+volumes:
+  mysql_data:
+    driver: local
